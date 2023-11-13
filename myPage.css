@@ -1,0 +1,125 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: red;
+}
+
+#menuC {
+  padding: 10px;
+}
+
+#menuB {
+  background-color:black;
+}
+
+#canvas {
+  height: calc(100vh - 160px);
+  width: calc(100vw - 160px);
+  border: 3px solid grey;
+  background-color: lightgrey;
+  position: absolute;
+  top: 160px;
+  left: 160px;
+}
+
+#menu {
+  height: 99%;
+  width: 150px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 20px;
+  position: absolute;
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  height: 150px;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 20px;
+  position: absolute;
+  text-align: center;
+  font-size: 50px;
+}
+
+#titleDIV {
+  position: absolute;
+  width: 80%;
+  padding: 10px;
+  top: 25px;
+  left: 12%;
+}
+
+#settings {
+  border-radius: 20px;
+  border: 5px solid black;
+  z-index: 2;
+  display: block;
+  position: fixed;
+  top: 2%;
+  width: 100px;
+  height: 90%;
+  background-color: white;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+#settings.position {
+  right: -150px;
+}
+
+#settings.show {
+  animation: move_on 0.5s ease-in-out;
+  right: -150px;
+}
+
+#settings.hide {
+  animation: move_off 0.5s ease-in-out;
+  right: 2px;
+}
+
+@keyframes move_on {
+  0% {
+    right: 2px;
+  }
+  100% {
+    right: -150px;
+  }
+}
+
+@keyframes move_off {
+  0% {
+    right: -150px;
+  }
+  100% {
+    right: 2px;
+  }
+}
+
+#fileInputLabel {
+  display: none;
+}
+
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu a {
+  text-decoration: none;
+  display: block;
+  padding: 7px;
+  background-color: white;
+  color:blue;
+}
+
+#menu a:hover {
+  background-color: lightgrey;
+  color:yellow;
+}

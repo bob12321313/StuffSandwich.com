@@ -1,0 +1,140 @@
+#titlebox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:blue;
+  padding: 7px;
+}
+
+#title {
+  margin:auto;
+  font-size:30px;
+  color:yellow;
+}
+
+#menu {
+  padding: 10px;
+}
+
+#menuB {
+  background-color:black;
+}
+
+#scrollingInfo {
+  padding:10px;
+  background-color:rgba(128, 128, 128, 0.3);
+  margin:auto;
+  width:500px;
+  height:700px;
+  overflow-y:scroll;
+}
+
+.black {
+  background-color: black;
+  color: white;
+  padding:1px;
+}
+
+body, html {
+  background-color:yellow;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow:hidden;
+}
+
+#menuP {
+  display: block;
+  position: fixed;
+  top: 2%;
+  width: 100px;
+  height: 90%;
+  background-color: white;
+  padding: 20px;
+}
+
+#menuP.position {
+  right: -145px;
+}
+
+#menuP.show {
+  animation: move_on 0.5s ease-in-out;
+  right: -145px;
+}
+
+#menuP.hide {
+  animation: move_off 0.5s ease-in-out;
+  right: 7px;
+}
+
+@keyframes move_on {
+  0% {
+    right: 7px;
+  }
+  100% {
+    right: -145px;
+  }
+}
+
+@keyframes move_off {
+  0% {
+    right: -145px;
+  }
+  100% {
+    right: 7px;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding: 7px;
+  background-color: white;
+  color:blue;
+}
+a:hover {
+  background-color: lightgrey;
+  color:yellow;
+}
+
+.listI {
+  text-align:left;
+  display: block;
+  padding: 7px;
+  background-color: white;
+  color: blue;
+  border: none;
+  cursor: pointer;
+  width:100px;
+}
+.listI:hover {
+  color:yellow;
+  background-color:lightgrey;
+}
+#myAccount {
+  text-align:left;
+  display: block;
+  padding: 7px;
+  background-color: grey;
+  color: yellow;
+  border: none;
+  cursor: pointer;
+  width:100px;
+}
+
+::-webkit-scrollbar {
+            width: 10px; 
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0); 
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background:yellow;
+        }
+
+        scrollbar-width: thin;
+        scrollbar-color:yellow rgba(0, 0, 0, 0); 
+
+
