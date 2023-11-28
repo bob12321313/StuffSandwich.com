@@ -126,11 +126,9 @@
   }
   const snake = new Snake();
   const food = new Food();
-  let pause = "no";
   let gameIsOver = false;
   let score = 0;
-  function gameLoop() {
-  if (pause === "no") {  
+  function gameLoop() { 
     updateHighScore(score);
     if (gameIsOver) {
       return;
@@ -167,18 +165,7 @@
     } else if (event.key === "r") {
       window.location.href = "snakeGame.html";
     }    
-  }
   });
-
-  document.addEventListener("keydown", (e)=> {
-    if (e.key === "p") {
-      if (pause === "no") {
-        pause = "yes";
-      } else {
-        pause = "no";
-      }
-    });
-
 
   </script>
 </body>
