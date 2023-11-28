@@ -18,6 +18,7 @@
   <canvas id="game-board"></canvas>
   <script>
     let HSO = "no";
+    let pause = "no";
     const canvas = document.getElementById("game-board");
     const ctx = canvas.getContext("2d");
     const cellSize = 20;
@@ -129,6 +130,7 @@
   let gameIsOver = false;
   let score = 0;
   function gameLoop() {
+  if (pause === "no") {  
     updateHighScore(score);
     if (gameIsOver) {
       return;
@@ -165,7 +167,17 @@
     } else if (event.key === "r") {
       window.location.href = "snakeGame.html";
     }    
+  }
   });
+
+  document.addEventListener("keydown", (e)=> {
+    if (e.key === "p") {
+      if (pause === "no") {
+        pause = "yes";
+      } else {
+        pause = "no";
+      }
+    });
 
 
   </script>
