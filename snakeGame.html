@@ -154,13 +154,13 @@
   }
   setInterval(gameLoop, 100);
   document.addEventListener("keydown", (event) => {
-    if (event.key === "w" || event.key === "UpArrow") {
+    if (event.key === "w" || event.key === "ArrowUp") {
       snake.turnUp();
     } else if (event.key === "s" || event.key === "ArrowDown") {
       snake.turnDown();
-    } else if (event.key === "d" || event.key === "arrowRight") {
+    } else if (event.key === "d" || event.key === "ArrowRight") {
       snake.turnRight();
-    } else if (event.key === "a" || event.key === "leftArrow") {
+    } else if (event.key === "a" || event.key === "ArrowLeft") {
       snake.turnLeft();
     } else if (event.key === "r") {
       window.location.href = "snakeGame.html";
